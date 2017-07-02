@@ -1,0 +1,1241 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ex",
+				"expected"
+			],
+			[
+				"if",
+				"ife\tif … else"
+			],
+			[
+				"h",
+				"http-server"
+			],
+			[
+				"di",
+				"digit_name"
+			],
+			[
+				"pro",
+				"projects"
+			],
+			[
+				"we",
+				"welcomeMessage"
+			],
+			[
+				"ap",
+				"appendSkills"
+			],
+			[
+				"dou",
+				"donuts"
+			],
+			[
+				"co",
+				"cost"
+			],
+			[
+				"d",
+				"donuts"
+			],
+			[
+				"mes",
+				"messages〔variable〕"
+			],
+			[
+				"me",
+				"messages"
+			],
+			[
+				"nu",
+				"numbers"
+			],
+			[
+				"number",
+				"numbers〔variable〕"
+			],
+			[
+				"c",
+				"crew"
+			],
+			[
+				"s",
+				"shepherd"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"r",
+				"rowLength"
+			],
+			[
+				"la",
+				"laugh"
+			],
+			[
+				"Julia",
+				"JuliaJames"
+			],
+			[
+				"br",
+				"break"
+			],
+			[
+				"ea",
+				"education"
+			],
+			[
+				"tu",
+				"true"
+			],
+			[
+				"e",
+				"eatsAnimals"
+			],
+			[
+				"eat",
+				"eatsPlants〔variable〕"
+			],
+			[
+				"top",
+				"toppings〔variable〕"
+			],
+			[
+				"b",
+				"balance"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"o",
+				"onlineCourses"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"app",
+				"appendSkills〔function〕"
+			],
+			[
+				"func",
+				"func〔variable〕"
+			],
+			[
+				"p",
+				"projects"
+			],
+			[
+				"pa",
+				"page"
+			],
+			[
+				"tr",
+				"tureLinks"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"fa",
+				"fakelinksToString"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"real",
+				"realLinks〔variable〕"
+			],
+			[
+				"new",
+				"newLinks〔variable〕"
+			],
+			[
+				"www",
+				"www.lynda.com"
+			],
+			[
+				"realU",
+				"realUrl"
+			],
+			[
+				"replce",
+				"replace"
+			],
+			[
+				"HT",
+				"HTMLstring"
+			],
+			[
+				"rep",
+				"replace"
+			],
+			[
+				"HTMLs",
+				"HTMLstring"
+			],
+			[
+				"uda",
+				"udaCity"
+			],
+			[
+				"sc",
+				"schools"
+			],
+			[
+				"to",
+				"toUpperCase"
+			],
+			[
+				"loca",
+				"location〔variable〕"
+			],
+			[
+				"job",
+				"jobs"
+			],
+			[
+				"work",
+				"work_obj〔argument〕"
+			],
+			[
+				"con",
+				"contactInfo〔variable〕"
+			],
+			[
+				"u",
+				"university"
+			],
+			[
+				"re",
+				"realWorkDetails"
+			],
+			[
+				"defa",
+				"defaultWorkDetails〔variable〕"
+			],
+			[
+				"j",
+				"job1"
+			],
+			[
+				"HTMLb",
+				"HTMLbioPic〔variable〕"
+			],
+			[
+				"contact",
+				"contactInfo〔variable〕"
+			],
+			[
+				"ture",
+				"tureInfo〔argument〕"
+			],
+			[
+				"ne",
+				"newContact"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"em",
+				"employer"
+			],
+			[
+				"HTMLh",
+				"HTMLheaderRole〔variable〕"
+			],
+			[
+				"contac",
+				"contactInfo"
+			],
+			[
+				"none",
+				"navbar:container:out\tcontainer-out"
+			],
+			[
+				"add",
+				"addClass〔function〕"
+			],
+			[
+				"HTMLhea",
+				"HTMLheaderRole〔variable〕"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"flex",
+				"flex-basis"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"spa",
+				"space-between"
+			],
+			[
+				"pd",
+				"padding"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"dr",
+				"drawer"
+			],
+			[
+				"zo",
+				"zocial-twitter"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"fl",
+				"flex-basis"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"mat",
+				"margin-right"
+			],
+			[
+				"al",
+				"align-items"
+			],
+			[
+				"ju",
+				"justify-content"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"i",
+				"images"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"po",
+				"personal"
+			],
+			[
+				"im",
+				"images/"
+			],
+			[
+				"ima",
+				"images_src/"
+			],
+			[
+				"a",
+				"alt\tAttr"
+			],
+			[
+				"fi",
+				"figcaption\tTag"
+			],
+			[
+				"f",
+				"figcaption\tTag"
+			],
+			[
+				"ord",
+				"order"
+			],
+			[
+				"t",
+				"translate()"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"m",
+				"margin-right"
+			],
+			[
+				"he",
+				"header\tTag"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"ls",
+				"list-style"
+			],
+			[
+				"brick",
+				"brick1〔variable〕"
+			],
+			[
+				"sp",
+				"space-between"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"ali",
+				"align-self"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"in",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 820,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"last_filter": "toog",
+		"selected_items":
+		[
+			[
+				"toog",
+				"Toggle Block Comment"
+			],
+			[
+				"lint",
+				"JSHint: Set Linting Preferences"
+			],
+			[
+				"packi",
+				"Package Control: Install Package"
+			],
+			[
+				"ssy",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pki",
+				"Package Control: Install Package"
+			],
+			[
+				"read",
+				"ReadmePlease"
+			],
+			[
+				"pack r",
+				"Package Control: Install Package"
+			],
+			[
+				"pack in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"readme",
+				"ReadmePlease"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ssym",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ssyjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ke",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"ssht",
+				"Set Syntax: HTML"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"pal",
+				"Package Control: List Packages"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"GitSavvy: help",
+				"GitSavvy: help"
+			],
+			[
+				"pa",
+				"Package Control: List Packages"
+			],
+			[
+				"ssh",
+				"Set Syntax: HTML"
+			],
+			[
+				"rea",
+				"ReadmePlease"
+			],
+			[
+				"ssj",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"bx",
+				"Boxy Theme: Configuration"
+			],
+			[
+				"bo",
+				"Boxy Theme: Configuration"
+			],
+			[
+				"box",
+				"Boxy Theme: Activation"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"gi",
+				"Git: Status"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"find",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"js",
+				"Build With: JSLint"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"File: Save All"
+			],
+			[
+				"sav",
+				"File: Save All"
+			],
+			[
+				"ss",
+				"Set Syntax: Markdown"
+			],
+			[
+				"new",
+				"File: New File Relative to Current View"
+			],
+			[
+				"e",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"h",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssc",
+				"Set Syntax: CSS"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"syh",
+				"Set Syntax: HTML"
+			],
+			[
+				"p",
+				"Project: Add Folder"
+			],
+			[
+				"sh",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"FindKeyConflicts: All Key Maps to Quick Panel",
+			"FindKeyConflicts: All Key Maps to Quick Panel:",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Viki/Desktop/classic_arcade_game_clone"
+	],
+	"file_history":
+	[
+		"/Users/Viki/Desktop/RunMath/todo.md",
+		"/Users/Viki/Desktop/RunMath/Jakefile.js",
+		"/Users/Viki/Desktop/RunMath/src/test.js",
+		"/Users/Viki/Desktop/RunMath/src/index.html",
+		"/Users/Viki/Desktop/RunMath/package.json",
+		"/Users/Viki/.zshrc",
+		"/Users/Viki/Desktop/RunMath/readme.md",
+		"/Users/Viki/Desktop/RunMath/jake.sh",
+		"/Users/Viki/Desktop/RunMath/.gitignore",
+		"/Users/Viki/Desktop/RunMath/build.js",
+		"/Users/Viki/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
+		"/Users/Viki/Documents/jamesshoreProject/how_to_tabs/.gitignore",
+		"/Users/Viki/Documents/jamesshoreProject/.gitignore",
+		"/Users/Viki/Documents/jamesshoreProject/how_to_tabs/readme.md",
+		"/Users/Viki/Documents/jamesshoreProject/how_to_tabs/package.json",
+		"/Users/Viki/Documents/jamesshoreProject/how_to_tabs/jake.sh",
+		"/Users/Viki/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
+		"/Users/Viki/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/README.md",
+		"/Users/Viki/Documents/jamesshoreProject/how_to_tabs/Jakefile.js",
+		"/Users/Viki/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/Viki/Library/Application Support/Sublime Text 3/Packages/SublimeLinter-jshint/README.md",
+		"/Users/Viki/Desktop/new_onlineResume_frontend_nanodegree/frontend-nanodegree-resume/js/helper.js",
+		"/Users/Viki/Desktop/new_onlineResume_frontend_nanodegree/frontend-nanodegree-resume/js/resumeBuilder.js",
+		"/Users/Viki/Desktop/new_onlineResume_frontend_nanodegree/frontend-nanodegree-resume/css/style.css",
+		"/Users/Viki/Desktop/new_onlineResume_frontend_nanodegree/frontend-nanodegree-resume/index.html",
+		"/Users/Viki/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/Users/Viki/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/Viki/Desktop/doTheMath.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Bank_Accounts.js",
+		"/Users/Viki/Desktop/viki_website/blog.html",
+		"/Users/Viki/Desktop/viki_website/viki_index.html",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Dounuts_revisited.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Bank.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/I_Got_Bills.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Nav_the_food_chain.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Laugh_it_Off2.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/another_type_of_loop.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Nested_Numbers.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Quidditch_cup.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Join_the_Crew.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/inline.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/colors_of_rainbow.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Laugh5-4.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Build_a_triangle.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/cry.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Factorials.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Laugh_it_Off.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Find_my_seat.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/99_bottle_of_juice.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/Count_down.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/FizzBuzz.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/back_to_school.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/checkBalance.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/what_do_I_wear.js",
+		"/Users/Viki/Desktop/checkBalance.js",
+		"/Users/Viki/Desktop/intro_to_JS_Quiz/iceCream.js",
+		"/Users/Viki/Documents/frontend-nanodegree-resume/css/style.css",
+		"/Users/Viki/Documents/frontend-nanodegree-resume/js/resumeBuilder.js",
+		"/Users/Viki/Documents/frontend-nanodegree-resume/js/helper.js",
+		"/Users/Viki/Documents/frontend-nanodegree-resume/index.html",
+		"/Users/Viki/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/Viki/Desktop/frontend-nanodegree-resume/js/resumeBuilder.js",
+		"/Users/Viki/Desktop/frontend-nanodegree-resume/js/helper.js",
+		"/Users/Viki/Desktop/frontend-nanodegree-resume/index.html",
+		"/Users/Viki/Desktop/frontend-nanodegree-resume/images/Viki_Zhang.png",
+		"/Users/Viki/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Viki/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Viki/frontend-nanodegree-resume/index.html",
+		"/Users/Viki/frontend-nanodegree-resume/js/resumeBuilder.js",
+		"/Users/Viki/frontend-nanodegree-resume/js/helper.js",
+		"/Users/Viki/frontend-nanodegree-resume/index",
+		"/Users/Viki/Desktop/Learning_JS_Udacity/learningjQuery.js",
+		"/Users/Viki/Desktop/Learning_JS_Udacity/learning_jQuery.html",
+		"/Users/Viki/Desktop/Learning_JS_Udacity/test.js",
+		"/Users/Viki/Desktop/Learning_JS_Udacity/learning_JS.html",
+		"/Users/Viki/Downloads/jQuery Sample Site 2/index.html",
+		"/Users/Viki/Downloads/jQuery Sample Site 2/app.js",
+		"/Users/Viki/Desktop/viki_website/about.html",
+		"/Users/Viki/Desktop/viki_website/contact.html",
+		"/Users/Viki/Desktop/viki_website/project.html",
+		"/Users/Viki/Desktop/viki_website/css/style_with_prefix.css",
+		"/Users/Viki/Desktop/viki_website/css/style.css",
+		"/Users/Viki/Desktop/viki_website/style_with_prefix.css",
+		"/Users/Viki/Desktop/viki_website/ab",
+		"/Users/Viki/Desktop/viki_website/gruntfile.js",
+		"/Users/Viki/Desktop/viki_website/.gitignore",
+		"/Users/Viki/Desktop/viki_website/css/normalize.css",
+		"/Users/Viki/Desktop/viki_website/.ig",
+		"/Users/Viki/Desktop/viki_website/package.json",
+		"/Users/Viki/Documents/viki_website/viki_index.html",
+		"/Users/Viki/Documents/viki_website/css/style.css",
+		"/Users/Viki/Documents/viki_website/.gitignore",
+		"/Users/Viki/Documents/viki_website/gruntfile.js",
+		"/Users/Viki/Documents/viki_website/package.json",
+		"/Users/Viki/Documents/Udacity_project/Responsive_blog/Gruntfile.js",
+		"/Users/Viki/Documents/Udacity_project/Responsive_blog/css/main.css",
+		"/Users/Viki/Documents/Udacity_project/Responsive_blog/index.html",
+		"/Users/Viki/Documents/Udacity_project/Build_a_Portfolio_Site/portfolio/js/script.min.js",
+		"/Users/Viki/Documents/Udacity_project/Build_a_Portfolio_Site/portfolio/gruntfile.js",
+		"/Users/Viki/Documents/Udacity_project/Build_a_Portfolio_Site/portfolio/package.json",
+		"/Users/Viki/Downloads/Start 3/main.css",
+		"/Users/Viki/Documents/Udacity_project/Build_a_Portfolio_Site/portfolio/js/package.json",
+		"/Users/Viki/Downloads/Start 3/index-viki.html",
+		"/Users/Viki/Downloads/Start 3/main-viki.css",
+		"/Users/Viki/Documents/Udacity_project/Build_a_Portfolio_Site/portfolio/index.html",
+		"/Users/Viki/Documents/Udacity_project/Build_a_Portfolio_Site/portfolio/css/main.css",
+		"/Users/Viki/Documents/Front_End_Interview_Questions/README.md",
+		"/Users/Viki/Documents/Front_End_Interview_Questions/Viki_answer.md",
+		"/Users/Viki/Documents/Front_End_Interview_Questions/Viki's answer.md",
+		"/Users/Viki/Documents/Front_End_Interview_Questions/CSS_Questions.md",
+		"/Users/Viki/Documents/Front_End_Interview_Questions/General_Question.md",
+		"/Users/Viki/Documents/Udacity_project/Git_course/version-control/reflections/recipes/HTML_Questions",
+		"/Users/Viki/.bash_profile",
+		"/Users/Viki/Desktop/untitled.html",
+		"/Users/Viki/Documents/Udacity_project/Git_course/version-control/reflections/lesson_1_reflection_prompts.txt",
+		"/Users/Viki/Documents/Udacity_project/Git_course/version-control/reflections/lesson_2_reflections.txt",
+		"/Users/Viki/Documents/Udacity_project/Git_course/version-control/reflections/lesson_3-reflections",
+		"/Users/Viki/Documents/Udacity_project/Git_course/version-control/reflections/recipes/chili-recipe.txt",
+		"/Users/Viki/Downloads/bash_profile_course",
+		"/Users/Viki/Downloads/lesson_1_reflection_prompts.txt",
+		"/Users/Viki/Downloads/keyboard-shortcuts/start.html",
+		"/Users/Viki/Downloads/keyboard-shortcuts/finish.html",
+		"/Users/Viki/Downloads/frontend-mockup-to-article-master/mockup-to-article/index.html",
+		"/Users/Viki/Downloads/oojs_project_files/3_Treetunes/6_treetunes_complete/index.html",
+		"/Users/Viki/Downloads/oojs_project_files/1_Dice/6_dice_finished/index.html",
+		"/Users/Viki/Downloads/oojs_project_files/1_Dice/6_dice_finished/dice.js",
+		"/Users/Viki/Library/Mobile Documents/com~apple~CloudDocs/JavaScript_Programming_Learning/answers_of_Eloquent_Javascript/chapter_1/chapter1.js",
+		"/Users/Viki/Library/Mobile Documents/com~apple~CloudDocs/JavaScript_Programming_Learning/answers_of_Eloquent_Javascript/chapter_1/chapter1.html"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"expected, acturalResult",
+			"expected,",
+			"expected, ",
+			"result",
+			"  // display: function() {}",
+			"job",
+			"dedisplay",
+			"\"",
+			"donuts",
+			"[i]",
+			"friend",
+			"Friend",
+			"friend",
+			"message",
+			"verifyBalance",
+			"column",
+			"row",
+			"i",
+			"console.log(rainbow);\n",
+			"slice",
+			"num",
+			"buildTriange",
+			"width",
+			"Things",
+			"||",
+			"x",
+			".",
+			"salary",
+			";\n",
+			"earned",
+			"with",
+			"console.log(\"In 2015, a person with\" + education +\"earned an average of $\"+salary+\"/year.\");",
+			" /",
+			" ",
+			"year.",
+			"falvor",
+			"else{\n            console.log(suspect + \" is not the suspect!\");\n        }",
+			"topContacts",
+			"Education",
+			"href=\"#\"",
+			"href=\"#",
+			" href=\"#",
+			"mobile",
+			"HTMLstring",
+			"j",
+			"i",
+			"bioPic",
+			"projects[1]",
+			"e",
+			"projects[0]",
+			".project2",
+			".project1",
+			".lynda",
+			".udaCity",
+			"0",
+			"schools",
+			"Url",
+			"education.onlineCourses.udaCity",
+			"udaCity",
+			"[1]",
+			"[1",
+			"[0]",
+			"[",
+			"[0]",
+			"university",
+			"2",
+			"1",
+			" project1",
+			"jobs",
+			"contactInfo",
+			"%data%",
+			"span",
+			"job2",
+			"job1",
+			"contactInfo",
+			"udaCity",
+			"1st",
+			"];\n",
+			"Project",
+			"project1.employer,",
+			"1",
+			"Work",
+			"work",
+			"Work",
+			"job1",
+			"1",
+			"new",
+			"replaceAndAppendtoHTML",
+			"replaceAndPrependtoHTML",
+			"BioPic",
+			"Header",
+			"bio",
+			"replaceAndAddtoHTML",
+			"Header",
+			"ture",
+			"project2",
+			",project1",
+			"tDescription",
+			"projectTitle",
+			"projectTitl",
+			"projectTitle",
+			"HTMLworkEmployer",
+			"job1",
+			"HTMLworkTitle",
+			"HTMLworkEmployer",
+			"welcomeMsg",
+			"bioPic",
+			"pic",
+			"newHTMLbiopic",
+			"HTML",
+			"headerName",
+			"prepend",
+			"mobile",
+			"Lmobile",
+			"mobile",
+			"'",
+			"school",
+			"</a>",
+			"article",
+			"div",
+			"section",
+			"article",
+			"#2E3192",
+			"F7931E",
+			" #",
+			"orange",
+			"  ##",
+			"#"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tabs_extra_last_activated": 1498967124.95,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 158.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 118.0
+	},
+	"output.markdown":
+	{
+		"height": 24.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 28.0
+	},
+	"pinned_build_system": "",
+	"project": "game.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/new_onlineResume_frontend_nanodegree/frontend-nanodegree-resume/js/resumeBuilder.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 203.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
