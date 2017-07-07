@@ -6,11 +6,11 @@ var Enemy = function(x, y, speed) {
     this.speed = speed;
     this.sprite = 'images/enemy-bug.png';
 };
-Enemy.prototype.update = function(dt,enemyDistance) {
+Enemy.prototype.update = function(dt) {
     "use strict";
     //enemies now move accorss the playground
-        for (var i = 0; i < 5; i++) {
-            this.x = this.x + dt * this.speed;
+    for (var i = 0; i < 5; i++) {
+        this.x = this.x + dt * this.speed;
 
     }
     // let enemies go back to start if they move outside the playground
@@ -49,7 +49,7 @@ var enemy1 = new Enemy(0, 60, 20);
 var enemy2 = new Enemy(0, 110, 40);
 var enemy3 = new Enemy(0, 120, 10);
 var enemy4 = new Enemy(0, 210, 30);
-var allEnemies = [enemy1, enemy2,enemy3,enemy4];
+var allEnemies = [enemy1, enemy2, enemy3, enemy4];
 
 // player object
 var player = new Player(200, 375);
