@@ -58,7 +58,7 @@ Player.prototype.handleInput = function(key) {
 
     //let the player go back to his original position if he reaches the border
     // of the playground or water.
-    if (this.y < 65 | this.x < 0 || this.x > 500 || this.y > 448) {
+    if (this.y < 65 || this.x < 0 || this.x > 500 || this.y > 448) {
         console.log(this.x, this.y);
         this.x = 200;
         this.y = 375;
