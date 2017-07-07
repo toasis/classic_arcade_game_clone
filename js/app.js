@@ -6,10 +6,16 @@ var Enemy = function(x, y, speed) {
     this.speed = speed;
     this.sprite = 'images/enemy-bug.png';
 };
-Enemy.prototype.update = function(dt) {
+Enemy.prototype.update = function(dt,enemyDistance) {
     "use strict";
-    for (var i = 0; i < 5; i++) {
-       this.x = this.x + dt * this.speed;
+    //enemies now move accorss the playground
+        for (var i = 0; i < 5; i++) {
+            this.x = this.x + dt * this.speed;
+
+    }
+    // let enemies go back to start if they move outside the playground
+    if (this.x > 507) {
+        this.x = 0;
     }
 };
 
@@ -38,17 +44,14 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Now instantiate your objects.
-var enemy1 = new Enemy(0, 50, 20);
+// enemy instances
+var enemy1 = new Enemy(0, 60, 20);
+var enemy2 = new Enemy(0, 110, 40);
+var enemy3 = new Enemy(0, 120, 10);
+var enemy4 = new Enemy(0, 210, 30);
+var allEnemies = [enemy1, enemy2,enemy3,enemy4];
 
-
-var enemy2 = new Enemy(50, 150,40);
-
-// Place all enemy objects in an array called allEnemies
-// var allEnemies = [enemy1];
-var allEnemies = [enemy1, enemy2];
-
-// Place the player object in a variable called player
+// player object
 var player = new Player(200, 375);
 
 
