@@ -13,7 +13,7 @@ Enemy.prototype.update = function(dt) {
         this.x = this.x + dt * this.speed;
 
     }
-    // let enemies go back to start if they move outside the playground
+    // let enemies go back to start line if they move outside the playground
     if (this.x > 507) {
         this.x = 0;
     }
@@ -35,8 +35,20 @@ var Player = function(x, y) {
     this.sprite = 'images/char-boy.png';
 };
 
-Player.prototype.update = function() {
-
+Player.prototype.update = function(x,y, dt) {
+    switch (keyCode) {
+      case "left":
+        this.x = this.x - dt * 50;
+        break;
+      case "right":
+        this.x = this.x + dt * 50;
+        break;
+      case "down":
+        this.y = this.y + dt * 50;
+        break;
+      default://top
+        this.y = this.y - dt * 50;
+    }
 };
 
 Player.prototype.render = function() {
@@ -52,12 +64,13 @@ var enemy4 = new Enemy(0, 210, 30);
 var allEnemies = [enemy1, enemy2, enemy3, enemy4];
 
 // player object
-var player = new Player(200, 375);
+var player = new Player(200,375);
 
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
+    "use strict";
     var allowedKeys = {
         37: 'left',
         38: 'up',
