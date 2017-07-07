@@ -35,22 +35,28 @@ var Player = function(x, y) {
     this.sprite = 'images/char-boy.png';
 };
 
-Player.prototype.update = function(x,y, dt) {
-    switch (keyCode) {
-      case "left":
-        this.x = this.x - dt * 50;
-        break;
-      case "right":
-        this.x = this.x + dt * 50;
-        break;
-      case "down":
-        this.y = this.y + dt * 50;
-        break;
-      default://top
-        this.y = this.y - dt * 50;
-    }
-};
+Player.prototype.update = function(dt) {
 
+};
+Player.prototype.handleInput = function(key) {
+    switch (key) {
+        case "left":
+            this.x = this.x - 15;
+            console.log(this.x);
+            break;
+        case "right":
+            this.x = this.x + 15;
+            console.log(this.x);
+            break;
+        case "down":
+            this.y = this.y + 15;
+            console.log(this.x);
+            break;
+        default: //top
+            this.y = this.y - 15;
+            console.log(this.x);
+    }
+}
 Player.prototype.render = function() {
 
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -64,7 +70,7 @@ var enemy4 = new Enemy(0, 210, 30);
 var allEnemies = [enemy1, enemy2, enemy3, enemy4];
 
 // player object
-var player = new Player(200,375);
+var player = new Player(200, 375);
 
 
 // This listens for key presses and sends the keys to your
