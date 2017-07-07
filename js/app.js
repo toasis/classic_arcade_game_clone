@@ -35,28 +35,44 @@ var Player = function(x, y) {
     this.sprite = 'images/char-boy.png';
 };
 
+Player.prototype.handleInput = function(key) {
+    "use strict";
+    //use key on keyboard to control the movement of the player
+    switch (key) {
+        case "left":
+            this.x = this.x - 25;
+
+            break;
+        case "right":
+            this.x = this.x + 25;
+
+            break;
+        case "down":
+            this.y = this.y + 25;
+
+            break;
+        default: //top
+            this.y = this.y - 25;
+
+    }
+
+    //let the player go back to his original position if he reaches the border
+    // of the playground or water.
+    if (this.y < 65 | this.x < 0 || this.x > 500 || this.y > 448) {
+        console.log(this.x, this.y);
+        this.x = 200;
+        this.y = 375;
+    }
+};
+
 Player.prototype.update = function(dt) {
 
 };
-Player.prototype.handleInput = function(key) {
-    switch (key) {
-        case "left":
-            this.x = this.x - 15;
-            console.log(this.x);
-            break;
-        case "right":
-            this.x = this.x + 15;
-            console.log(this.x);
-            break;
-        case "down":
-            this.y = this.y + 15;
-            console.log(this.x);
-            break;
-        default: //top
-            this.y = this.y - 15;
-            console.log(this.x);
-    }
-}
+
+Player.prototype.init = function() {
+
+};
+
 Player.prototype.render = function() {
 
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
