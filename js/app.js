@@ -5,6 +5,8 @@ var Enemy = function(x, y, speed) {
     this.y = y;
     this.speed = speed;
     this.sprite = 'images/enemy-bug.png';
+    this.width = 101;
+    this.height = 171;
 };
 Enemy.prototype.update = function(dt) {
     "use strict";
@@ -16,6 +18,19 @@ Enemy.prototype.update = function(dt) {
     // let enemies go back to start line if they move outside the playground
     if (this.x > 507) {
         this.x = 0;
+    }
+};
+
+Enemy.prototype.checkCollision = function(){
+    "use strict";
+    if (this.x < Player.x + Player.width &&
+        this.x + this.width > Player.x &&
+        this.y < Player.y + Player.height &&
+        this.height + this.y > Player.y) {
+        // collision detected!
+        Player.x = 200;
+        Player.y = 375;
+        console.log( "collision!");
     }
 };
 
@@ -33,6 +48,8 @@ var Player = function(x, y) {
     this.x = x;
     this.y = y;
     this.sprite = 'images/char-boy.png';
+    this.width = 101;
+    this.height = 171;
 };
 
 Player.prototype.handleInput = function(key) {
@@ -55,21 +72,19 @@ Player.prototype.handleInput = function(key) {
             this.y = this.y - 25;
 
     }
-
     //let the player go back to his original position if he reaches the border
     // of the playground or water.
     if (this.y < 65 || this.x < 0 || this.x > 500 || this.y > 448) {
-        console.log(this.x, this.y);
+
         this.x = 200;
-        this.y = 375;
+            this.y = 375;
     }
-};
-
-Player.prototype.update = function(dt) {
 
 };
 
-Player.prototype.init = function() {
+Player.prototype.update = function() {
+    "use strict";
+
 
 };
 
@@ -79,11 +94,13 @@ Player.prototype.render = function() {
 };
 
 // enemy instances
-var enemy1 = new Enemy(0, 60, 20);
-var enemy2 = new Enemy(0, 110, 40);
-var enemy3 = new Enemy(0, 120, 10);
+// var enemy1 = new Enemy(0, 60, 20);
+// var enemy2 = new Enemy(0, 110, 40);
+// var enemy3 = new Enemy(0, 120, 10);
 var enemy4 = new Enemy(0, 210, 30);
-var allEnemies = [enemy1, enemy2, enemy3, enemy4];
+var allEnemies = [enemy4];
+// var allEnemies = [enemy1,enemy2];
+
 
 // player object
 var player = new Player(200, 375);
