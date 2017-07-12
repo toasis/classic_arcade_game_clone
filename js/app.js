@@ -21,17 +21,17 @@ Enemy.prototype.update = function(dt) {
     }
 };
 
-Enemy.prototype.checkCollision = function(){
+Enemy.prototype.checkCollision = function() {
     "use strict";
-    if (this.x < Player.x + Player.width &&
-        this.x + this.width > Player.x &&
-        this.y < Player.y + Player.height &&
-        this.height + this.y > Player.y) {
-        // collision detected!
-        Player.x = 200;
-        Player.y = 375;
-        console.log( "collision!");
+    // console.log("checkCollisions invoked!");
+    if (this.x < player.x + player.width &&
+        this.x + this.width > player.x &&
+        this.y < player.y + player.height &&
+        this.height + this.y > player.y) {
+        console.log("now condition is true, checkCollisions invoked!");
+
     }
+
 };
 
 // Draw the enemy on the screen, required method for game
@@ -77,14 +77,14 @@ Player.prototype.handleInput = function(key) {
     if (this.y < 65 || this.x < 0 || this.x > 500 || this.y > 448) {
 
         this.x = 200;
-            this.y = 375;
+        this.y = 375;
     }
 
 };
 
 Player.prototype.update = function() {
     "use strict";
-
+    Enemy.prototype.checkCollision();
 
 };
 
