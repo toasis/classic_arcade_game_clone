@@ -97,12 +97,29 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+var Gem = function(x, y) {
+    "use strict";
+    this.x = x;
+    this.y = y;
+    this.sprite = 'images/Gem_Orange.png';
+    this.width = 101;
+    this.height = 101;
+};
+Gem.prototype.update = function() {
+    "use strict";
+
+};
+Gem.prototype.render = function() {
+
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
 // enemy instances
 // var enemy1 = new Enemy(0, 60, 20);
 var enemy2 = new Enemy(0, 110, 40);
 var enemy3 = new Enemy(0, 120, 10);
 var enemy4 = new Enemy(0, 210, 30);
 var allEnemies = [enemy2, enemy3, enemy4];
+var gem = new Gem(100,120);
 
 
 
