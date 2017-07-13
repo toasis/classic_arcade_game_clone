@@ -102,6 +102,9 @@ var Engine = (function(global) {
         allGems.forEach(function(gem) {
             gem.render();
         });
+        gameIndicators.forEach(function(gameIndicator) {
+            gameIndicator.render();
+        });
     }
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
@@ -183,7 +186,10 @@ var Engine = (function(global) {
         'images/enemy-bug.png',
         'images/char-boy.png',
         'images/Gem_Orange.png',
-        'images/Gem_Green.png'
+        'images/Gem_Green.png',
+        'images/GameOver.png',
+        'images/GameStart.png',
+        'images/GameWon.png'
     ]);
     Resources.onReady(init);
 
