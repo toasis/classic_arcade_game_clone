@@ -99,11 +99,11 @@ Player.prototype.render = function() {
 
 // enemy instances
 // var enemy1 = new Enemy(0, 60, 20);
-// var enemy2 = new Enemy(0, 110, 40);
+var enemy2 = new Enemy(0, 110, 40);
 var enemy3 = new Enemy(0, 120, 10);
 var enemy4 = new Enemy(0, 210, 30);
-var allEnemies = [enemy3, enemy4];
-// var allEnemies = [enemy1,enemy2];
+var allEnemies = [enemy2, enemy3, enemy4];
+
 
 
 // player object
