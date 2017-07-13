@@ -97,8 +97,11 @@ var Engine = (function(global) {
         });
         player.update();
     }
+
     function updateExtras(dt) {
-        gem.update();
+        allGems.forEach(function(gem) {
+            gem.render();
+        });
     }
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
@@ -111,12 +114,12 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/water-block.png', // Top row is water
+                'images/stone-block.png', // Row 1 of 3 of stone
+                'images/stone-block.png', // Row 2 of 3 of stone
+                'images/stone-block.png', // Row 3 of 3 of stone
+                'images/grass-block.png', // Row 1 of 2 of grass
+                'images/grass-block.png' // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
@@ -155,7 +158,10 @@ var Engine = (function(global) {
         });
 
         player.render();
-        gem.render();
+        allGems.forEach(function(gem) {
+            gem.render();
+        });
+
     }
 
     /* This function does nothing but it could have been a good place to
@@ -176,7 +182,8 @@ var Engine = (function(global) {
         'images/grass-block.png',
         'images/enemy-bug.png',
         'images/char-boy.png',
-        'images/Gem_Orange.png'
+        'images/Gem_Orange.png',
+        'images/Gem_Green.png'
     ]);
     Resources.onReady(init);
 

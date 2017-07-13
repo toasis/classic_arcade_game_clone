@@ -43,7 +43,7 @@ Enemy.prototype.render = function() {
     "use strict";
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-
+/*******************************************************************************/
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
@@ -89,7 +89,6 @@ Player.prototype.handleInput = function(key) {
 Player.prototype.update = function() {
     "use strict";
 
-
 };
 
 Player.prototype.render = function() {
@@ -97,6 +96,7 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+/*******************************************************************************/
 var Gem = function(x, y) {
     "use strict";
     this.x = x;
@@ -113,14 +113,19 @@ Gem.prototype.render = function() {
 
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+
+/*******************************************************************************/
 // enemy instances
 // var enemy1 = new Enemy(0, 60, 20);
 var enemy2 = new Enemy(0, 110, 40);
 var enemy3 = new Enemy(0, 120, 10);
 var enemy4 = new Enemy(0, 210, 30);
 var allEnemies = [enemy2, enemy3, enemy4];
-var gem = new Gem(100,120);
 
+var gem1 = new Gem(100,120);
+var gem2 = new Gem (200,130);
+gem2.sprite ='images/Gem_Green.png';
+var allGems = [gem1, gem2];
 
 
 // player object
