@@ -5,9 +5,25 @@ var Enemy = function(x, y, speed) {
     this.y = y;
     this.speed = speed;
     this.sprite = 'images/enemy-bug.png';
-    this.width = 101;
-    this.height = 171;
+    this.width = 97;
+    this.height = 65;
 };
+
+Enemy.prototype.checkCollision = function() {
+    "use strict";
+    // console.log("checkCollisions invoked!");
+    if (this.x < player.x + player.width &&
+        this.x + this.width > player.x &&
+        this.y < player.y + player.height &&
+        this.height + this.y > player.y) {
+        console.log("now condition is true, checkCollisions invoked!");
+        player.x = 200;
+        player.y = 375;
+
+    }
+
+};
+
 Enemy.prototype.update = function(dt) {
     "use strict";
     //enemies now move accorss the playground
@@ -19,19 +35,7 @@ Enemy.prototype.update = function(dt) {
     if (this.x > 507) {
         this.x = 0;
     }
-};
-
-Enemy.prototype.checkCollision = function() {
-    "use strict";
-    // console.log("checkCollisions invoked!");
-    if (this.x < player.x + player.width &&
-        this.x + this.width > player.x &&
-        this.y < player.y + player.height &&
-        this.height + this.y > player.y) {
-        console.log("now condition is true, checkCollisions invoked!");
-
-    }
-
+    this.checkCollision();
 };
 
 // Draw the enemy on the screen, required method for game
@@ -48,8 +52,8 @@ var Player = function(x, y) {
     this.x = x;
     this.y = y;
     this.sprite = 'images/char-boy.png';
-    this.width = 101;
-    this.height = 171;
+    this.width = 68;
+    this.height = 78;
 };
 
 Player.prototype.handleInput = function(key) {
@@ -84,7 +88,7 @@ Player.prototype.handleInput = function(key) {
 
 Player.prototype.update = function() {
     "use strict";
-    Enemy.prototype.checkCollision();
+
 
 };
 
@@ -96,9 +100,9 @@ Player.prototype.render = function() {
 // enemy instances
 // var enemy1 = new Enemy(0, 60, 20);
 // var enemy2 = new Enemy(0, 110, 40);
-// var enemy3 = new Enemy(0, 120, 10);
+var enemy3 = new Enemy(0, 120, 10);
 var enemy4 = new Enemy(0, 210, 30);
-var allEnemies = [enemy4];
+var allEnemies = [enemy3, enemy4];
 // var allEnemies = [enemy1,enemy2];
 
 
