@@ -132,11 +132,13 @@ Gem.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 /*******************************************************************************/
-var GameIndicator = function(x, y) {
+var GameIndicator = function(x, y, width, height) {
     "use strict";
     this.x = x;
     this.y = y;
     this.sprite = 'images/GameOver.png';
+    this.width = 202;
+    this.height = 22;
 };
 
 GameIndicator.prototype.update = function() {
@@ -160,7 +162,7 @@ GameIndicator.prototype.won = function() {
 };
 GameIndicator.prototype.render = function() {
 
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y, this.width, this.height);
 };
 
 /*******************************************************************************/

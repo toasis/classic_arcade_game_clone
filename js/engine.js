@@ -164,7 +164,9 @@ var Engine = (function(global) {
         allGems.forEach(function(gem) {
             gem.render();
         });
-
+        gameIndicators.forEach(function(gameIndicator) {
+            gameIndicator.render();
+        });
     }
 
     /* This function does nothing but it could have been a good place to
