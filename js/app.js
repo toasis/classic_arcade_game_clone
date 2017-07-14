@@ -181,12 +181,12 @@ gem2.sprite = 'images/Gem_Green.png';
 var allGems = [gem1, gem2];
 
 //GameIndicator instance
-var game_Over_Indicator = new GameIndicator(250, 250);
-var game_Start_Indicator = new GameIndicator(250, 250);
-var game_Won_Indicator = new GameIndicator(250, 250);
+var game_Over_Indicator = new GameIndicator(153, 200);
+var game_Start_Indicator = new GameIndicator(160, 400);
+var game_Won_Indicator = new GameIndicator(150, 100);
 
 game_Start_Indicator.sprite = "images/GameStart.png";
-game_Start_Indicator.sprite = "images/GameWon.png";
+game_Won_Indicator.sprite = "images/GameWon.png";
 
 var gameIndicators = [game_Start_Indicator, game_Over_Indicator, game_Won_Indicator];
 
