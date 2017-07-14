@@ -16,7 +16,8 @@ Enemy.prototype.checkCollision = function() {
         this.x + this.width > player.x &&
         this.y < player.y + player.height &&
         this.height + this.y > player.y) {
-        console.log("player hit bug, checkCollisions invoked! GameOver");
+        // console.log("You hits bug! CheckCollisions invoked!Game Over!");
+        game_Over_Indicator.over();
         player.reset();
 
 
@@ -79,15 +80,16 @@ Player.prototype.handleInput = function(key) {
     //let the player go back to his original position if he reaches the border
     // of the playground or water.
     if (this.y < 0 || this.x < 0 || this.x > 440 || this.y > 448) {
-        console.log('reach the border, game Over! please play again!');
-        // this.reset();
+       game_OutBorder_Indicator.outBorder();
+       player.reset();
+    } else if (this.y < 45 && this.x > 0) {
         //Show won message in console if player reach water.
-    } else if (this.y < 10 && this.x > 0) {
-        console.log("You Won!");
+        game_Won_Indicator.won();
     }
 
 };
 Player.prototype.reset = function() {
+    game_Start_Indicator.start();
     this.x = 200;
     this.y = 375;
 
@@ -118,7 +120,7 @@ Gem.prototype.checkCollisions = function() {
         this.x + this.width > player.x &&
         this.y < player.y + player.height &&
         this.height + this.y > player.y) {
-        console.log("Player hits gem!");
+
 
     }
 
@@ -137,7 +139,7 @@ var GameIndicator = function(x, y, width, height) {
     this.x = x;
     this.y = y;
     this.sprite = 'images/GameOver.png';
-    this.width = 202;
+    this.width = 213;
     this.height = 22;
 };
 
@@ -147,17 +149,22 @@ GameIndicator.prototype.update = function() {
 };
 GameIndicator.prototype.start = function() {
     "use strict";
-    console.log("Game start!");
+    console.log("Game start--!");
 
 };
 GameIndicator.prototype.over = function() {
     "use strict";
-    console.log("Game Over!");
+    console.log("You hits bug!Game Over--!");
 
 };
 GameIndicator.prototype.won = function() {
     "use strict";
-    console.log("You Won");
+    console.log("You Won!--");
+
+};
+GameIndicator.prototype.outBorder = function() {
+    "use strict";
+    console.log("reach the border, game Over! please play again--!");
 
 };
 GameIndicator.prototype.render = function() {
@@ -184,9 +191,11 @@ var allGems = [gem1, gem2];
 var game_Over_Indicator = new GameIndicator(153, 200);
 var game_Start_Indicator = new GameIndicator(160, 400);
 var game_Won_Indicator = new GameIndicator(150, 100);
+var game_OutBorder_Indicator = new GameIndicator(150, 100);
 
 game_Start_Indicator.sprite = "images/GameStart.png";
 game_Won_Indicator.sprite = "images/GameWon.png";
+game_OutBorder_Indicator.sprite = "images/GameOutBorder.png";
 
 var gameIndicators = [game_Start_Indicator, game_Over_Indicator, game_Won_Indicator];
 
