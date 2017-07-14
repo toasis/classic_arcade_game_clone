@@ -17,7 +17,8 @@ Enemy.prototype.checkCollision = function() {
         this.y < player.y + player.height &&
         this.height + this.y > player.y) {
         // console.log("You hits bug! CheckCollisions invoked!Game Over!");
-        game_Over_Indicator.over();
+        // game_Over_Indicator.over();
+        game_Over_Indicator.display("Game Over");
         player.reset();
 
 
@@ -80,16 +81,16 @@ Player.prototype.handleInput = function(key) {
     //let the player go back to his original position if he reaches the border
     // of the playground or water.
     if (this.y < 0 || this.x < 0 || this.x > 440 || this.y > 448) {
-       game_OutBorder_Indicator.outBorder();
+       game_OutBorder_Indicator.display("Out of border");
        player.reset();
     } else if (this.y < 45 && this.x > 0) {
         //Show won message in console if player reach water.
-        game_Won_Indicator.won();
+        game_Won_Indicator.display("Won");
     }
 
 };
 Player.prototype.reset = function() {
-    game_Start_Indicator.start();
+    game_Start_Indicator.display();
     this.x = 200;
     this.y = 375;
 
@@ -143,29 +144,27 @@ var GameIndicator = function(x, y, width, height) {
     this.height = 22;
 };
 
-GameIndicator.prototype.update = function() {
-    "use strict";
+GameIndicator.prototype.display = function(indicator){
+    switch (indicator) {
+        case "Game Over":
+            this.sprite = 'images/GameOver.png';
+            console.log("You hits bug!Game Over--!");
 
-};
-GameIndicator.prototype.start = function() {
-    "use strict";
-    console.log("Game start--!");
+            break;
+        case "Out of border":
+            this.sprite = 'images/GameOutBorder.png';
+            console.log("reach the border, game Over! please play again--!");
+            break;
+        case "Won":
+            this.sprite = 'images/GameWon.png';
+            console.log("You Won!--");
 
-};
-GameIndicator.prototype.over = function() {
-    "use strict";
-    console.log("You hits bug!Game Over--!");
+            break;
+        default: //start
+            this.sprite = 'images/GameStart.png';
+            console.log("Game start--!");
 
-};
-GameIndicator.prototype.won = function() {
-    "use strict";
-    console.log("You Won!--");
-
-};
-GameIndicator.prototype.outBorder = function() {
-    "use strict";
-    console.log("reach the border, game Over! please play again--!");
-
+    }
 };
 GameIndicator.prototype.render = function() {
 
