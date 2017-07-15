@@ -3,21 +3,21 @@ var gameOver = false;
 
 //display "You hits bug!Game Over--!" if player hit bugs.
 var hitBugs = function() {
-    game_Over_Indicator.display("Game Over");
+    gameOverIndicator.display("Game Over");
     player.reset();
     gameOver = true;
 };
 //display ""You Won!--" if player reach water.
 //of borders.
 var setWon = function() {
-    game_Won_Indicator.display("Won!");
+    gameWonIndicator.display("Won!");
     player.reset();
 };
 
 //display ""reach the border, game Over! please play again--!" if player go out
 //of borders.
 var outOfBorders = function() {
-    game_OutBorder_Indicator.display("Out of border");
+    gameOutBorderIndicator.display("Out of border");
     player.reset();
     gameOver = true;
 };
@@ -108,7 +108,7 @@ Player.prototype.handleInput = function(key) {
 
 };
 Player.prototype.reset = function() {
-    game_Start_Indicator.display();
+    gameStartIndicator.display();
     this.x = 200;
     this.y = 375;
 
@@ -205,16 +205,16 @@ gem2.sprite = 'images/Gem_Green.png';
 var allGems = [gem1, gem2];
 
 //GameIndicator instance
-var game_Over_Indicator = new GameIndicator(153, 200);
-var game_Start_Indicator = new GameIndicator(160, 400);
-var game_Won_Indicator = new GameIndicator(150, 100);
-var game_OutBorder_Indicator = new GameIndicator(150, 100);
+var gameOverIndicator = new GameIndicator(153, 200);
+var gameStartIndicator = new GameIndicator(160, 400);
+var gameWonIndicator = new GameIndicator(150, 100);
+var gameOutBorderIndicator = new GameIndicator(150, 100);
 
-game_Start_Indicator.sprite = "images/GameStart.png";
-game_Won_Indicator.sprite = "images/GameWon.png";
-game_OutBorder_Indicator.sprite = "images/GameOutBorder.png";
+gameStartIndicator.sprite = "images/GameStart.png";
+gameWonIndicator.sprite = "images/GameWon.png";
+gameOutBorderIndicator.sprite = "images/GameOutBorder.png";
 
-var gameIndicators = [game_Start_Indicator, game_Over_Indicator, game_Won_Indicator];
+var gameIndicators = [gameStartIndicator, gameOverIndicator, gameWonIndicator];
 
 // player object
 var player = new Player(200, 375);
