@@ -1,4 +1,27 @@
 // Enemies our player must avoid
+var gameOver = false;
+
+//display "You hits bug!Game Over--!" if player hit bugs.
+var hitBugs = function() {
+    game_Over_Indicator.display("Game Over");
+    player.reset();
+    gameOver = true;
+};
+//display ""You Won!--" if player reach water.
+//of borders.
+var setWon = function() {
+    game_Won_Indicator.display("Won!");
+    player.reset();
+};
+
+//display ""reach the border, game Over! please play again--!" if player go out
+//of borders.
+var outOfBorders = function() {
+    game_OutBorder_Indicator.display("Out of border");
+    player.reset();
+    gameOver = true;
+};
+
 var Enemy = function(x, y, speed) {
     "use strict";
     this.x = x;
@@ -16,11 +39,7 @@ Enemy.prototype.checkCollision = function() {
         this.x + this.width > player.x &&
         this.y < player.y + player.height &&
         this.height + this.y > player.y) {
-        // console.log("You hits bug! CheckCollisions invoked!Game Over!");
-        // game_Over_Indicator.over();
-        game_Over_Indicator.display("Game Over");
-        player.reset();
-
+        hitBugs();
 
     }
 
@@ -81,8 +100,7 @@ Player.prototype.handleInput = function(key) {
     //let the player go back to his original position if he reaches the border
     // of the playground or water.
     if (this.y < 0 || this.x < 0 || this.x > 440 || this.y > 448) {
-       game_OutBorder_Indicator.display("Out of border");
-       player.reset();
+        outOfBorders();
     } else if (this.y < 45 && this.x > 0) {
         //Show won message in console if player reach water.
         game_Won_Indicator.display("Won");
@@ -144,7 +162,7 @@ var GameIndicator = function(x, y, width, height) {
     this.height = 22;
 };
 
-GameIndicator.prototype.display = function(indicator){
+GameIndicator.prototype.display = function(indicator) {
     switch (indicator) {
         case "Game Over":
             this.sprite = 'images/GameOver.png';
