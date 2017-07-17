@@ -1,28 +1,76 @@
 // Enemies our player must avoid
 var gameOver = false;
+var playerWon = false;
+var playerOutofBorder = false;
+
+var GameIndicator = function(x, y, width, height) {
+    "use strict";
+    this.x = x;
+    this.y = y;
+    this.sprite = 'images/GameOver.png';
+    this.width = 213;
+    this.height = 22;
+};
+
+GameIndicator.prototype.display = function(indicator) {
+    switch (indicator) {
+        case "Game Over":
+            console.log("You hits bug!Game Over--!");
+
+            break;
+        case "Out of border":
+            console.log("reach the border, game Over! please play again--!");
+            break;
+        case "Won":
+            console.log("You Won!--");
+
+            break;
+        default: //start
+            console.log("Game start--!");
+
+    }
+};
 
 
-//display "You hits bug!Game Over--!" if player hit bugs.
+
+//display "You hits bug!Game Over--!" in console and a "game over" PNG on screen
+//if player hit bugs.
 var hitBugs = function() {
     gameOverIndicator.display("Game Over");
     player.reset();
     gameOver = true;
 };
 //display ""You Won!--" if player reach water.
-//of borders.
 var setWon = function() {
     gameWonIndicator.display("Won!");
-    player.reset();
+    playerWon = true;
+    // player.reset();
 };
 
 //display ""reach the border, game Over! please play again--!" if player go out
 //of borders.
 var outOfBorders = function() {
     gameOutBorderIndicator.display("Out of border");
+    playerOutofBorder = true;
     player.reset();
-    gameOver = true;
 };
 
+GameIndicator.prototype.render = function() {
+    "use strict";
+    if (gameOver) {
+        ctx.drawImage(Resources.get(gameOverIndicator.sprite), gameOverIndicator.x,
+            gameOverIndicator.y, gameOverIndicator.width, gameOverIndicator.height);
+    }
+    if (playerOutofBorder) {
+        ctx.drawImage(Resources.get(gameOutBorderIndicator.sprite), gameOutBorderIndicator.x,
+            gameOutBorderIndicator.y, gameOutBorderIndicator.width, gameOutBorderIndicator.height);
+    }
+    if (playerWon) {
+        ctx.drawImage(Resources.get(gameWonIndicator.sprite), gameWonIndicator.x,
+            gameWonIndicator.y, gameWonIndicator.width, gameWonIndicator.height);
+    }
+};
+/*******************************************************************************/
 var Enemy = function(x, y, speed) {
     "use strict";
     this.x = x;
@@ -102,9 +150,11 @@ Player.prototype.handleInput = function(key) {
     // of the playground or water.
     if (this.y < 0 || this.x < 0 || this.x > 440 || this.y > 448) {
         outOfBorders();
-    } else if (this.y < 45 && this.x > 0) {
+    } else if (this.y < 50 && this.x > 0) {
+        console.log(this.x, this.y);
         //Show won message in console if player reach water.
-        game_Won_Indicator.display("Won");
+        setWon();
+
     }
 
 };
@@ -125,80 +175,36 @@ Player.prototype.render = function() {
 };
 
 /*******************************************************************************/
-var Gem = function(x, y) {
-    "use strict";
-    this.x = x;
-    this.y = y;
-    this.sprite = 'images/Gem_Orange.png';
-    this.width = 101;
-    this.height = 101;
-};
-Gem.prototype.checkCollisions = function() {
-    "use strict";
-    console.log("Gem Location:" + this.x + this.y);
-    if (this.x < player.x + player.width &&
-        this.x + this.width > player.x &&
-        this.y < player.y + player.height &&
-        this.height + this.y > player.y) {
-
-
-    }
-
-};
-Gem.prototype.update = function() {
-    "use strict";
-    this.checkCollisions();
-};
-Gem.prototype.render = function() {
-
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
-/*******************************************************************************/
-var GameIndicator = function(x, y, width, height) {
-    "use strict";
-    this.x = x;
-    this.y = y;
-    this.sprite = 'images/GameOver.png';
-    this.width = 213;
-    this.height = 22;
-};
-
-GameIndicator.prototype.display = function(indicator) {
-    switch (indicator) {
-        case "Game Over":
-            this.sprite = 'images/GameOver.png';
-            console.log("You hits bug!Game Over--!");
-
-            break;
-        case "Out of border":
-            this.sprite = 'images/GameOutBorder.png';
-            console.log("reach the border, game Over! please play again--!");
-            break;
-        case "Won":
-            this.sprite = 'images/GameWon.png';
-            console.log("You Won!--");
-
-            break;
-        default: //start
-            this.sprite = 'images/GameStart.png';
-            console.log("Game start--!");
-
-    }
-};
-
-// GameIndicator.prototype.render = function() {
-
-//     ctx.drawImage(Resources.get(this.sprite), this.x, this.y, this.width, this.height);
+// var Gem = function(x, y) {
+//     "use strict";
+//     this.x = x;
+//     this.y = y;
+//     this.sprite = 'images/Gem_Orange.png';
+//     this.width = 101;
+//     this.height = 101;
 // };
+// Gem.prototype.checkCollisions = function() {
+//     "use strict";
+//     console.log("Gem Location:" + this.x + this.y);
+//     if (this.x < player.x + player.width &&
+//         this.x + this.width > player.x &&
+//         this.y < player.y + player.height &&
+//         this.height + this.y > player.y) {
 
-GameIndicator.prototype.render = function() {
-    if (gameOver) {
-        ctx.drawImage(Resources.get(gameOverIndicator.sprite), gameOverIndicator.x,
-            gameOverIndicator.y, gameOverIndicator.width, gameOverIndicator.height);
-    }
 
-};
+//     }
+
+// };
+// Gem.prototype.update = function() {
+//     "use strict";
+//     this.checkCollisions();
+// };
+// Gem.prototype.render = function() {
+
+//     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+// };
 /*******************************************************************************/
+
 // enemy instances
 // var enemy1 = new Enemy(0, 60, 20);
 // var enemy2 = new Enemy(0, 110, 40);
@@ -208,22 +214,22 @@ var allEnemies = [enemy3];
 
 
 //gem instances
-var gem1 = new Gem(100, 120);
-var gem2 = new Gem(200, 130);
-gem2.sprite = 'images/Gem_Green.png';
-var allGems = [gem1, gem2];
+// var gem1 = new Gem(100, 120);
+// var gem2 = new Gem(200, 130);
+// gem2.sprite = 'images/Gem_Green.png';
+// var allGems = [gem1, gem2];
 
 //GameIndicator instance
 var gameOverIndicator = new GameIndicator(153, 200);
 var gameStartIndicator = new GameIndicator(160, 400);
 var gameWonIndicator = new GameIndicator(150, 100);
-var gameOutBorderIndicator = new GameIndicator(150, 100);
+var gameOutBorderIndicator = new GameIndicator(160, 100);
 
 gameStartIndicator.sprite = "images/GameStart.png";
 gameWonIndicator.sprite = "images/GameWon.png";
 gameOutBorderIndicator.sprite = "images/GameOutBorder.png";
 
-var gameIndicators = [gameStartIndicator, gameOverIndicator, gameWonIndicator];
+var gameIndicators = [gameStartIndicator, gameOverIndicator, gameWonIndicator, gameOutBorderIndicator];
 
 // player object
 var player = new Player(200, 375);

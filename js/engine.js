@@ -99,9 +99,9 @@ var Engine = (function(global) {
     }
 
     function updateExtras(dt) {
-        allGems.forEach(function(gem) {
-            gem.render();
-        });
+        // allGems.forEach(function(gem) {
+        //     gem.render();
+        // });
         gameIndicators.forEach(function(gameIndicator) {
             gameIndicator.render();
         });
@@ -116,6 +116,8 @@ var Engine = (function(global) {
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
+         ctx.fillStyle = "#FFFF00"; // Yellow
+         ctx.fillRect(0,0, ctx.canvas.width, ctx.canvas.height);
         var rowImages = [
                 'images/water-block.png', // Top row is water
                 'images/stone-block.png', // Row 1 of 3 of stone
@@ -144,9 +146,7 @@ var Engine = (function(global) {
                 ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
             }
         }
-        // if (gameOver) {
-        //     console.log("Game Over in render function");
-        // }
+
 
         renderEntities();
     }
@@ -164,9 +164,9 @@ var Engine = (function(global) {
         });
 
         player.render();
-        allGems.forEach(function(gem) {
-            gem.render();
-        });
+        // allGems.forEach(function(gem) {
+        //     gem.render();
+        // });
         gameIndicators.forEach(function(gameIndicator) {
             gameIndicator.render();
         });
