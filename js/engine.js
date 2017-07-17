@@ -144,9 +144,9 @@ var Engine = (function(global) {
                 ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
             }
         }
-        if (gameOver) {
-            console.log("Game Over in render function");
-        }
+        // if (gameOver) {
+        //     console.log("Game Over in render function");
+        // }
 
         renderEntities();
     }

@@ -1,6 +1,7 @@
 // Enemies our player must avoid
 var gameOver = false;
 
+
 //display "You hits bug!Game Over--!" if player hit bugs.
 var hitBugs = function() {
     gameOverIndicator.display("Game Over");
@@ -184,11 +185,19 @@ GameIndicator.prototype.display = function(indicator) {
 
     }
 };
+
+// GameIndicator.prototype.render = function() {
+
+//     ctx.drawImage(Resources.get(this.sprite), this.x, this.y, this.width, this.height);
+// };
+
 GameIndicator.prototype.render = function() {
+    if (gameOver) {
+        ctx.drawImage(Resources.get(gameOverIndicator.sprite), gameOverIndicator.x,
+            gameOverIndicator.y, gameOverIndicator.width, gameOverIndicator.height);
+    }
 
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y, this.width, this.height);
 };
-
 /*******************************************************************************/
 // enemy instances
 // var enemy1 = new Enemy(0, 60, 20);
