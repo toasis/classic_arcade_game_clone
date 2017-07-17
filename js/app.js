@@ -2,6 +2,7 @@
 var gameOver = false;
 var playerWon = false;
 var playerOutofBorder = false;
+var gameStart = true;
 
 var GameIndicator = function(x, y, width, height) {
     "use strict";
@@ -27,24 +28,31 @@ GameIndicator.prototype.display = function(indicator) {
             break;
         default: //start
             console.log("Game start--!");
+            gameOver = false;
+            playerWon = false;
 
     }
 };
-
-
 
 //display "You hits bug!Game Over--!" in console and a "game over" PNG on screen
 //if player hit bugs.
 var hitBugs = function() {
     gameOverIndicator.display("Game Over");
-    player.reset();
     gameOver = true;
+    setTimeout(function() {
+        player.reset();
+    }, 1500);
+
+
 };
 //display ""You Won!--" if player reach water.
 var setWon = function() {
     gameWonIndicator.display("Won!");
     playerWon = true;
-    // player.reset();
+    gameOver = false;
+    setTimeout(function() {
+        player.reset();
+    }, 1500);
 };
 
 //display ""reach the border, game Over! please play again--!" if player go out
@@ -52,7 +60,9 @@ var setWon = function() {
 var outOfBorders = function() {
     gameOutBorderIndicator.display("Out of border");
     playerOutofBorder = true;
-    player.reset();
+    setTimeout(function() {
+        player.reset();
+    }, 1500);
 };
 
 GameIndicator.prototype.render = function() {
@@ -60,14 +70,20 @@ GameIndicator.prototype.render = function() {
     if (gameOver) {
         ctx.drawImage(Resources.get(gameOverIndicator.sprite), gameOverIndicator.x,
             gameOverIndicator.y, gameOverIndicator.width, gameOverIndicator.height);
+    } else {
+        ctx.drawImage(Resources.get(gameStartIndicator.sprite), gameStartIndicator.x,
+            gameStartIndicator.y, gameStartIndicator.width, gameStartIndicator.height);
     }
-    if (playerOutofBorder) {
-        ctx.drawImage(Resources.get(gameOutBorderIndicator.sprite), gameOutBorderIndicator.x,
-            gameOutBorderIndicator.y, gameOutBorderIndicator.width, gameOutBorderIndicator.height);
-    }
+    // if (playerOutofBorder) {
+    //     ctx.drawImage(Resources.get(gameOutBorderIndicator.sprite), gameOutBorderIndicator.x,
+    //         gameOutBorderIndicator.y, gameOutBorderIndicator.width, gameOutBorderIndicator.height);
+    // }
     if (playerWon) {
         ctx.drawImage(Resources.get(gameWonIndicator.sprite), gameWonIndicator.x,
             gameWonIndicator.y, gameWonIndicator.width, gameWonIndicator.height);
+    } else {
+        ctx.drawImage(Resources.get(gameStartIndicator.sprite), gameStartIndicator.x,
+            gameStartIndicator.y, gameStartIndicator.width, gameStartIndicator.height);
     }
 };
 /*******************************************************************************/
