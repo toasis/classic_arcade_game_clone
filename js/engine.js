@@ -105,9 +105,9 @@ var Engine = (function(global) {
         gameIndicators.forEach(function(gameIndicator) {
             gameIndicator.render();
         });
-        // playerLifes.forEach(function(playerLife) {
-        //     playerLife.render();
-        // });
+        playerLives.forEach(function(playerLife) {
+            playerLife.render();
+        });
     }
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
@@ -173,6 +173,9 @@ var Engine = (function(global) {
         gameIndicators.forEach(function(gameIndicator) {
             gameIndicator.render();
         });
+        // gameIndicators.forEach(function(gameIndicator) {
+        //     gameIndicator.render();
+        // });
     }
 
     /* This function does nothing but it could have been a good place to
@@ -197,7 +200,10 @@ var Engine = (function(global) {
         'images/Gem_Green.png',
         'images/GameOver.png',
         'images/GameStart.png',
-        'images/GameWon.png'
+        'images/GameWon.png',
+        'images/GameOutBorder.png',
+        'images/Heart.png',
+        'images/hitbug.png'
     ]);
     Resources.onReady(init);
 
