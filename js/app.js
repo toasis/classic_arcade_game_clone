@@ -3,6 +3,7 @@ var gameOver = false;
 var playerWon = false;
 var playerOutofBorder = false;
 var gameStart = true;
+var playerLife = 3;
 
 var GameIndicator = function(x, y, width, height) {
     "use strict";
@@ -74,10 +75,10 @@ GameIndicator.prototype.render = function() {
         ctx.drawImage(Resources.get(gameStartIndicator.sprite), gameStartIndicator.x,
             gameStartIndicator.y, gameStartIndicator.width, gameStartIndicator.height);
     }
-    // if (playerOutofBorder) {
-    //     ctx.drawImage(Resources.get(gameOutBorderIndicator.sprite), gameOutBorderIndicator.x,
-    //         gameOutBorderIndicator.y, gameOutBorderIndicator.width, gameOutBorderIndicator.height);
-    // }
+    if (playerOutofBorder) {
+        ctx.drawImage(Resources.get(gameOutBorderIndicator.sprite), gameOutBorderIndicator.x,
+            gameOutBorderIndicator.y, gameOutBorderIndicator.width, gameOutBorderIndicator.height);
+    }
     if (playerWon) {
         ctx.drawImage(Resources.get(gameWonIndicator.sprite), gameWonIndicator.x,
             gameWonIndicator.y, gameWonIndicator.width, gameWonIndicator.height);
@@ -86,6 +87,19 @@ GameIndicator.prototype.render = function() {
             gameStartIndicator.y, gameStartIndicator.width, gameStartIndicator.height);
     }
 };
+
+//GameIndicator instances
+var gameOverIndicator = new GameIndicator(153, 200);
+var gameStartIndicator = new GameIndicator(160, 400);
+var gameWonIndicator = new GameIndicator(150, 100);
+var gameOutBorderIndicator = new GameIndicator(160, 100);
+
+gameStartIndicator.sprite = "images/GameStart.png";
+gameWonIndicator.sprite = "images/GameWon.png";
+gameOutBorderIndicator.sprite = "images/GameOutBorder.png";
+
+var gameIndicators = [gameStartIndicator, gameOverIndicator, gameWonIndicator, gameOutBorderIndicator];
+
 /*******************************************************************************/
 var Enemy = function(x, y, speed) {
     "use strict";
@@ -129,6 +143,13 @@ Enemy.prototype.render = function() {
     "use strict";
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+// enemy instances
+// var enemy1 = new Enemy(0, 60, 20);
+// var enemy2 = new Enemy(0, 110, 40);
+var enemy3 = new Enemy(0, 50, 10);
+// var enemy4 = new Enemy(0, 210, 30);
+var allEnemies = [enemy3];
+
 /*******************************************************************************/
 // Now write your own player class
 // This class requires an update(), render() and
@@ -189,7 +210,29 @@ Player.prototype.render = function() {
 
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+// player instance
+var player = new Player(200, 375);
+/*******************************************************************************/
+// var PlayerLife = function(x, y) {
+//     "use strict";
+//     this.x = x;
+//     this.y = y;
+//     this.sprite = 'images/Heart.png';
+//     this.width = 101;
+//     this.height = 171;
+// };
+// PlayerLife.prototype.update = function() {
+//     "use strict";
 
+// };
+// PlayerLife.prototype.render = function() {
+
+//     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+// };
+// var playerLife1 = new PlayerLife(0,500);
+// var playerLife2 = new PlayerLife(0,450);
+// var playerLife3 = new PlayerLife(0,400);
+// var playerLifes = [playerLife1, playerLife2, playerLife3];
 /*******************************************************************************/
 // var Gem = function(x, y) {
 //     "use strict";
@@ -221,12 +264,6 @@ Player.prototype.render = function() {
 // };
 /*******************************************************************************/
 
-// enemy instances
-// var enemy1 = new Enemy(0, 60, 20);
-// var enemy2 = new Enemy(0, 110, 40);
-var enemy3 = new Enemy(0, 50, 10);
-// var enemy4 = new Enemy(0, 210, 30);
-var allEnemies = [enemy3];
 
 
 //gem instances
@@ -235,20 +272,6 @@ var allEnemies = [enemy3];
 // gem2.sprite = 'images/Gem_Green.png';
 // var allGems = [gem1, gem2];
 
-//GameIndicator instance
-var gameOverIndicator = new GameIndicator(153, 200);
-var gameStartIndicator = new GameIndicator(160, 400);
-var gameWonIndicator = new GameIndicator(150, 100);
-var gameOutBorderIndicator = new GameIndicator(160, 100);
-
-gameStartIndicator.sprite = "images/GameStart.png";
-gameWonIndicator.sprite = "images/GameWon.png";
-gameOutBorderIndicator.sprite = "images/GameOutBorder.png";
-
-var gameIndicators = [gameStartIndicator, gameOverIndicator, gameWonIndicator, gameOutBorderIndicator];
-
-// player object
-var player = new Player(200, 375);
 
 
 // This listens for key presses and sends the keys to your

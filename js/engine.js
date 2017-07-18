@@ -105,6 +105,9 @@ var Engine = (function(global) {
         gameIndicators.forEach(function(gameIndicator) {
             gameIndicator.render();
         });
+        // playerLifes.forEach(function(playerLife) {
+        //     playerLife.render();
+        // });
     }
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
