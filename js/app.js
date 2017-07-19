@@ -2,8 +2,8 @@
 var gameOver = false;
 var playerWon = false;
 var playerOutofBorder = false;
-var gameStart = true;
-var meetEnemy =false;
+var gameStart = false;
+var meetEnemy = false;
 // var playerLife = 3;
 
 var GameIndicator = function(x, y, width, height) {
@@ -14,13 +14,18 @@ var GameIndicator = function(x, y, width, height) {
     this.width = 213;
     this.height = 22;
 };
+var setGameStart = function(){
+    "use strict";
+    if (player.x !== 200 || player.y !==375) {
+        gameStart = true;
+    }
 
+};
 var hitBugs = function() {
     "use strict";
     console.log("Meet enemy! Game Over!");
     gameOver = true;
-    meetEnemy =true;
-    gameStart = false;
+    meetEnemy = true;
     setTimeout(function() {
         player.reset();
     }, 1500);
@@ -32,8 +37,6 @@ var setWon = function() {
     "use strict";
     console.log("You Won!");
     playerWon = true;
-    gameOver = false;
-    gameStart = false;
     setTimeout(function() {
         player.reset();
     }, 1500);
@@ -42,8 +45,8 @@ var setWon = function() {
 //display ""reach the border, game Over! please play again--!" if player go out
 //of borders.
 var outOfBorders = function() {
+    "use strict";
     console.log("You reach the borders,please play again!");
-    gameStart = false;
     playerOutofBorder = true;
     gameOver = true;
     setTimeout(function() {
@@ -53,51 +56,50 @@ var outOfBorders = function() {
 
 GameIndicator.prototype.render = function() {
     "use strict";
-    var drawGameStart = function(){
+    var drawGameStart = function() {
         ctx.drawImage(Resources.get(gameStartIndicator.sprite), gameStartIndicator.x,
             gameStartIndicator.y, gameStartIndicator.width, gameStartIndicator.height);
     };
-    var drawGameOver = function(){
+    var drawGameOver = function() {
         ctx.drawImage(Resources.get(gameOverIndicator.sprite), gameOverIndicator.x,
             gameOverIndicator.y, gameOverIndicator.width, gameOverIndicator.height);
     };
-    var drawMeetEnemy =function(){
+    var drawMeetEnemy = function() {
         ctx.drawImage(Resources.get(meetEnemyIndicator.sprite), meetEnemyIndicator.x,
             meetEnemyIndicator.y, meetEnemyIndicator.width, meetEnemyIndicator.height);
     };
-    var drawOutofBorder= function(){
+    var drawOutofBorder = function() {
         ctx.drawImage(Resources.get(gameOutBorderIndicator.sprite), gameOutBorderIndicator.x,
             gameOutBorderIndicator.y, gameOutBorderIndicator.width, gameOutBorderIndicator.height);
     };
-    var drawPlayerWon = function(){
+    var drawPlayerWon = function() {
         ctx.drawImage(Resources.get(gameWonIndicator.sprite), gameWonIndicator.x,
             gameWonIndicator.y, gameWonIndicator.width, gameWonIndicator.height);
     };
+    setGameStart();
+    if (gameStart === false) {
 
-    if (gameStart) {
         drawGameStart();
-    } else {
-
     }
 
     if (meetEnemy) {
         drawMeetEnemy();
         drawGameOver();
     } else {
-        drawGameStart();
+        // drawGameStart();
     }
 
     if (playerOutofBorder) {
         drawOutofBorder();
         drawGameOver();
-    }else{
-        drawGameStart();
+    } else {
+        // drawGameStart();
     }
 
     if (playerWon) {
         drawPlayerWon();
     } else {
-        drawGameStart();
+        // drawGameStart();
     }
 };
 
@@ -106,7 +108,7 @@ var gameOverIndicator = new GameIndicator(250, 10);
 var gameStartIndicator = new GameIndicator(160, 400);
 var gameWonIndicator = new GameIndicator(160, 10);
 var gameOutBorderIndicator = new GameIndicator(60, 10);
-var meetEnemyIndicator = new GameIndicator(60,10);
+var meetEnemyIndicator = new GameIndicator(60, 10);
 
 gameStartIndicator.sprite = "images/GameStart.png";
 gameWonIndicator.sprite = "images/GameWon.png";
@@ -114,7 +116,8 @@ gameOutBorderIndicator.sprite = "images/GameOutBorder.png";
 meetEnemyIndicator.sprite = "images/hitbug.png";
 
 var gameIndicators = [gameStartIndicator, gameOverIndicator, gameWonIndicator,
-gameOutBorderIndicator, meetEnemyIndicator];
+    gameOutBorderIndicator, meetEnemyIndicator
+];
 
 /*******************************************************************************/
 var Enemy = function(x, y, speed) {
@@ -212,7 +215,7 @@ Player.prototype.handleInput = function(key) {
 
 };
 Player.prototype.reset = function() {
-    // gameStartIndicator.display();
+    "use strict";
     this.x = 200;
     this.y = 375;
 
@@ -242,12 +245,12 @@ PlayerLife.prototype.update = function() {
 
 };
 PlayerLife.prototype.render = function() {
-
+    "use strict";
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-var playerLife1 = new PlayerLife(0,500);
-var playerLife2 = new PlayerLife(0,450);
-var playerLife3 = new PlayerLife(0,400);
+var playerLife1 = new PlayerLife(0, 500);
+var playerLife2 = new PlayerLife(0, 450);
+var playerLife3 = new PlayerLife(0, 400);
 var playerLives = [playerLife1, playerLife2, playerLife3];
 /*******************************************************************************/
 // var Gem = function(x, y) {
