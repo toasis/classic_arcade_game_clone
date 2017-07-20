@@ -4,7 +4,7 @@ var playerWon = false;
 var playerOutofBorder = false;
 var gameStart = false;
 var meetEnemy = false;
-// var playerLife = 3;
+var playerLivesCounter = 3;
 
 var GameIndicator = function(x, y, width, height) {
     "use strict";
@@ -14,9 +14,9 @@ var GameIndicator = function(x, y, width, height) {
     this.width = 213;
     this.height = 22;
 };
-var setGameStart = function(){
+var setGameStart = function() {
     "use strict";
-    if (player.x !== 200 || player.y !==375) {
+    if (player.x !== 200 || player.y !== 375) {
         gameStart = true;
     }
 };
@@ -25,6 +25,8 @@ var hitBugs = function() {
     console.log("Meet enemy! Game Over!");
     gameOver = true;
     meetEnemy = true;
+    //         playerLivesCounter = playerLivesCounter - 1;
+    //         console.log(playerLivesCounter);
     setTimeout(function() {
         player.reset();
     }, 1500);
@@ -52,12 +54,18 @@ var outOfBorders = function() {
         player.reset();
     }, 1500);
 };
+// var countPlayerLives = function() {
+//     if (hitBugs()) {
+//         playerLivesCounter = playerLivesCounter - 1;
+//         console.log(playerLivesCounter);
+//     }
+// };
 
 GameIndicator.prototype.render = function() {
     "use strict";
     var drawGameStart = function() {
-          ctx.drawImage(Resources.get(gameStartIndicator.sprite), gameStartIndicator.x,
-              gameStartIndicator.y, gameStartIndicator.width, gameStartIndicator.height);
+        ctx.drawImage(Resources.get(gameStartIndicator.sprite), gameStartIndicator.x,
+            gameStartIndicator.y, gameStartIndicator.width, gameStartIndicator.height);
 
     };
     var drawGameOver = function() {
@@ -85,6 +93,8 @@ GameIndicator.prototype.render = function() {
     if (meetEnemy) {
         drawMeetEnemy();
         drawGameOver();
+        countPlayerLives();
+
     }
 
     if (playerOutofBorder) {
@@ -212,11 +222,11 @@ Player.prototype.reset = function() {
     "use strict";
     this.x = 200;
     this.y = 375;
-     gameOver = false;
-     playerWon = false;
-     playerOutofBorder = false;
-     gameStart = false;
-     meetEnemy = false;
+    gameOver = false;
+    playerWon = false;
+    playerOutofBorder = false;
+    gameStart = false;
+    meetEnemy = false;
 
 };
 Player.prototype.update = function() {
@@ -247,9 +257,9 @@ PlayerLife.prototype.render = function() {
     "use strict";
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-var playerLife1 = new PlayerLife(450,540);
-var playerLife2 = new PlayerLife(410,540);
-var playerLife3 = new PlayerLife(370,540);
+var playerLife1 = new PlayerLife(450, 540);
+var playerLife2 = new PlayerLife(410, 540);
+var playerLife3 = new PlayerLife(370, 540);
 var playerLives = [playerLife1, playerLife2, playerLife3];
 /*******************************************************************************/
 // var Gem = function(x, y) {
