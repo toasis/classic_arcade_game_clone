@@ -25,8 +25,8 @@ var hitBugs = function() {
     console.log("Meet enemy! Game Over!");
     gameOver = true;
     meetEnemy = true;
-    //         playerLivesCounter = playerLivesCounter - 1;
-    //         console.log(playerLivesCounter);
+    // playerLivesCounter = playerLivesCounter - 1;
+        // console.log(playerLivesCounter);
     setTimeout(function() {
         player.reset();
     }, 1500);
@@ -93,7 +93,7 @@ GameIndicator.prototype.render = function() {
     if (meetEnemy) {
         drawMeetEnemy();
         drawGameOver();
-        countPlayerLives();
+        // countPlayerLives();
 
     }
 
