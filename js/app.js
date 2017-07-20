@@ -236,8 +236,8 @@ var PlayerLife = function(x, y) {
     this.x = x;
     this.y = y;
     this.sprite = 'images/Heart.png';
-    this.width = 101;
-    this.height = 171;
+    this.width = 36;
+    this.height = 36;
 };
 PlayerLife.prototype.update = function() {
     "use strict";
@@ -247,9 +247,9 @@ PlayerLife.prototype.render = function() {
     "use strict";
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-var playerLife1 = new PlayerLife(0, 500);
-var playerLife2 = new PlayerLife(0, 450);
-var playerLife3 = new PlayerLife(0, 400);
+var playerLife1 = new PlayerLife(450,540);
+var playerLife2 = new PlayerLife(410,540);
+var playerLife3 = new PlayerLife(370,540);
 var playerLives = [playerLife1, playerLife2, playerLife3];
 /*******************************************************************************/
 // var Gem = function(x, y) {

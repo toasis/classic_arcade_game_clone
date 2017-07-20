@@ -173,9 +173,9 @@ var Engine = (function(global) {
         gameIndicators.forEach(function(gameIndicator) {
             gameIndicator.render();
         });
-        // gameIndicators.forEach(function(gameIndicator) {
-        //     gameIndicator.render();
-        // });
+        playerLives.forEach(function(playerLife) {
+            playerLife.render();
+        });
     }
 
     /* This function does nothing but it could have been a good place to
