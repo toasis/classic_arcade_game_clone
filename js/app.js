@@ -158,10 +158,10 @@ Enemy.prototype.render = function() {
 };
 // enemy instances
 // var enemy1 = new Enemy(0, 60, 20);
-// var enemy2 = new Enemy(0, 110, 40);
+var enemy2 = new Enemy(0, 110, 20);
 var enemy3 = new Enemy(0, 50, 10);
 // var enemy4 = new Enemy(0, 210, 30);
-var allEnemies = [enemy3];
+var allEnemies = [enemy2, enemy3];
 
 /*******************************************************************************/
 // Now write your own player class
