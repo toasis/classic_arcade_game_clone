@@ -103,11 +103,13 @@ GameIndicator.prototype.render = function() {
 
     if (meetEnemy) {
         drawMeetEnemy();
+        renderHeart();
 
     }
 
     if (playerOutofBorder) {
         drawOutofBorder();
+        renderHeart();
     }
 
     if (playerWon) {
@@ -254,6 +256,7 @@ Player.prototype.render = function() {
 };
 // player instance
 var player = new Player(200, 375);
+
 /*******************************************************************************/
 var PlayerLife = function(x, y) {
     "use strict";
@@ -275,45 +278,19 @@ var playerLife1 = new PlayerLife(450, 540);
 var playerLife2 = new PlayerLife(410, 540);
 var playerLife3 = new PlayerLife(370, 540);
 var playerLives = [playerLife1, playerLife2, playerLife3];
-/*******************************************************************************/
-// var Gem = function(x, y) {
-//     "use strict";
-//     this.x = x;
-//     this.y = y;
-//     this.sprite = 'images/Gem_Orange.png';
-//     this.width = 101;
-//     this.height = 101;
-// };
-// Gem.prototype.checkCollisions = function() {
-//     "use strict";
-//     console.log("Gem Location:" + this.x + this.y);
-//     if (this.x < player.x + player.width &&
-//         this.x + this.width > player.x &&
-//         this.y < player.y + player.height &&
-//         this.height + this.y > player.y) {
-
-
-//     }
-
-// };
-// Gem.prototype.update = function() {
-//     "use strict";
-//     this.checkCollisions();
-// };
-// Gem.prototype.render = function() {
-
-//     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-// };
-/*******************************************************************************/
-
-
-
-//gem instances
-// var gem1 = new Gem(100, 120);
-// var gem2 = new Gem(200, 130);
-// gem2.sprite = 'images/Gem_Green.png';
-// var allGems = [gem1, gem2];
-
+var renderHeart = function() {
+    "use strict";
+    if (playerLivesCounter === 3) {
+        playerLives = [playerLife1, playerLife2,playerLife3];
+    } else if (playerLivesCounter === 2) {
+        playerLives = [playerLife1, playerLife2];
+    } else if (playerLivesCounter === 1) {
+        playerLives = [playerLife1];
+    }else if (playerLivesCounter === 0) {
+        playerLives = [0];
+    }
+};
+renderHeart();
 
 
 // This listens for key presses and sends the keys to your
