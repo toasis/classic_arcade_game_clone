@@ -287,7 +287,7 @@ var renderHeart = function() {
     } else if (playerLivesCounter === 1) {
         playerLives = [playerLife1];
     }else if (playerLivesCounter === 0) {
-        playerLives = [0];
+        playerLives = [];
     }
 };
 renderHeart();
