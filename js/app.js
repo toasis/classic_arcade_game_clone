@@ -5,6 +5,24 @@ var playerOutofBorder = false;
 var gameStart = false;
 var meetEnemy = false;
 var playerLivesCounter = 3;
+// set the basic game logic : if player meet enemy or out of border. his will lose
+// one life, if player has no life left, game will over.
+var subtractLives = function() {
+    if (meetEnemy === true || playerOutofBorder === true) {
+        playerLivesCounter = playerLivesCounter - 1;
+        if (playerLivesCounter > 0) {
+            console.log("Now player has " + playerLivesCounter + " lives left.");
+        } else if (playerLivesCounter === 1) {
+            console.log("Now player has " + playerLivesCounter + " life left.");
+        } else if (playerLivesCounter === 0) {
+            gameOver = true;
+            console.log("Now player has " + playerLivesCounter + " life left." + " Game Over!");
+            playerLivesCounter = 3;
+            player.reset();
+        }
+    }
+
+};
 
 var GameIndicator = function(x, y, width, height) {
     "use strict";
@@ -20,16 +38,13 @@ var setGameStart = function() {
         gameStart = true;
     }
 };
+
 var hitBugs = function() {
     "use strict";
-    console.log("Meet enemy! Game Over!");
-    gameOver = true;
+    console.log("Meet enemy!");
     meetEnemy = true;
-    // playerLivesCounter = playerLivesCounter - 1;
-        // console.log(playerLivesCounter);
-    setTimeout(function() {
-        player.reset();
-    }, 1500);
+    subtractLives();
+    player.reset();
 
 
 };
@@ -38,28 +53,24 @@ var setWon = function() {
     "use strict";
     console.log("You Won!");
     playerWon = true;
-    setTimeout(function() {
-        player.reset();
-    }, 1500);
+    player.reset();
+
 };
 
+// var setGameOver = function() {
+//     if (playerLivesCounter === 0) {
+//         gameOver = true;
+//     }
+// };
 //display ""reach the border, game Over! please play again--!" if player go out
 //of borders.
 var outOfBorders = function() {
     "use strict";
     console.log("You reach the borders,please play again!");
     playerOutofBorder = true;
-    gameOver = true;
-    setTimeout(function() {
-        player.reset();
-    }, 1500);
+    subtractLives();
+    player.reset();
 };
-// var countPlayerLives = function() {
-//     if (hitBugs()) {
-//         playerLivesCounter = playerLivesCounter - 1;
-//         console.log(playerLivesCounter);
-//     }
-// };
 
 GameIndicator.prototype.render = function() {
     "use strict";
@@ -92,18 +103,18 @@ GameIndicator.prototype.render = function() {
 
     if (meetEnemy) {
         drawMeetEnemy();
-        drawGameOver();
-        // countPlayerLives();
 
     }
 
     if (playerOutofBorder) {
         drawOutofBorder();
-        drawGameOver();
     }
 
     if (playerWon) {
         drawPlayerWon();
+    }
+    if (gameOver) {
+        drawGameOver();
     }
 };
 
@@ -169,9 +180,9 @@ Enemy.prototype.render = function() {
 // enemy instances
 // var enemy1 = new Enemy(0, 60, 20);
 var enemy2 = new Enemy(0, 110, 20);
-var enemy3 = new Enemy(0, 50, 10);
+// var enemy3 = new Enemy(0, 50, 10);
 // var enemy4 = new Enemy(0, 210, 30);
-var allEnemies = [enemy2, enemy3];
+var allEnemies = [enemy2];
 
 /*******************************************************************************/
 // Now write your own player class
@@ -222,11 +233,14 @@ Player.prototype.reset = function() {
     "use strict";
     this.x = 200;
     this.y = 375;
-    gameOver = false;
-    playerWon = false;
-    playerOutofBorder = false;
-    gameStart = false;
-    meetEnemy = false;
+    setTimeout(function() {
+        gameOver = false;
+        playerWon = false;
+        playerOutofBorder = false;
+        gameStart = false;
+        meetEnemy = false;
+    }, 1500);
+
 
 };
 Player.prototype.update = function() {
