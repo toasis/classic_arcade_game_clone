@@ -199,19 +199,51 @@ var Player = function(x, y) {
     this.height = 78;
 };
 
-Player.prototype.handleInput = function(key) {
+player1.handleInput = function(key) {
     "use strict";
     //use key on keyboard to control the movement of the player
     switch (key) {
-        case "left":
+        case "player1-left":
             this.x = this.x - 25;
 
             break;
-        case "right":
+        case "player1-right":
             this.x = this.x + 25;
 
             break;
-        case "down":
+        case "player1-down":
+            this.y = this.y + 25;
+
+            break;
+        default: //top
+            this.y = this.y - 25;
+
+    }
+    //let the player go back to his original position if he reaches the border
+    // of the playground or water.
+    if (this.y < 0 || this.x < 0 || this.x > 440 || this.y > 448) {
+        outOfBorders();
+    } else if (this.y < 20 && this.x > 0) {
+        console.log(this.x, this.y);
+        //Show won message in console if player reach water.
+        setWon();
+
+    }
+
+};
+player2.handleInput = function(key) {
+    "use strict";
+    //use key on keyboard to control the movement of the player
+    switch (key) {
+        case "player2-left":
+            this.x = this.x - 25;
+
+            break;
+        case "player2-right":
+            this.x = this.x + 25;
+
+            break;
+        case "player2-down":
             this.y = this.y + 25;
 
             break;
@@ -301,11 +333,24 @@ renderHeart();
 document.addEventListener('keyup', function(e) {
     "use strict";
     var allowedKeys = {
-        37: 'left',
-        38: 'up',
-        39: 'right',
-        40: 'down'
+        37: 'player1-left',
+        38: 'player1-up',
+        39: 'player1-right',
+        40: 'player1-down'
     };
 
     player1.handleInput(allowedKeys[e.keyCode]);
 });
+// use ASWD key on the keyborad to control player 2
+document.addEventListener('keyup', function(e) {
+    "use strict";
+    var allowedKeys = {
+        65: 'player1-leftd',
+        87: 'player2-up',
+        68: 'player2-right',
+        83: 'player2-down'
+    };
+
+    player2.handleInput(allowedKeys[e.keyCode]);
+});
+
