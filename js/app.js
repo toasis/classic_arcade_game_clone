@@ -34,7 +34,7 @@ var GameIndicator = function(x, y, width, height) {
 };
 var setGameStart = function() {
     "use strict";
-    if (player.x !== 200 || player.y !== 375) {
+    if (player1.x !== 200 || player1.y !== 375) {
         gameStart = true;
     }
 };
@@ -44,7 +44,7 @@ var hitBugs = function() {
     console.log("Meet enemy!");
     meetEnemy = true;
     subtractLives();
-    player.reset();
+    Player.reset();
 
 
 };
@@ -53,7 +53,7 @@ var setWon = function() {
     "use strict";
     console.log("You Won!");
     playerWon = true;
-    player.reset();
+    Player.reset();
 
 };
 
@@ -69,7 +69,7 @@ var outOfBorders = function() {
     console.log("You reach the borders,please play again!");
     playerOutofBorder = true;
     subtractLives();
-    player.reset();
+    Player.reset();
 };
 
 GameIndicator.prototype.render = function() {
@@ -150,10 +150,10 @@ var Enemy = function(x, y, speed) {
 Enemy.prototype.checkCollision = function() {
     "use strict";
     // console.log("checkCollisions invoked!");
-    if (this.x < player.x + player.width &&
-        this.x + this.width > player.x &&
-        this.y < player.y + player.height &&
-        this.height + this.y > player.y) {
+    if (this.x < Player.x + Player.width &&
+        this.x + this.width > Player.x &&
+        this.y < Player.y + Player.height &&
+        this.height + this.y > Player.y) {
         hitBugs();
 
     }
@@ -255,7 +255,10 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 // player instance
-var player = new Player(200, 375);
+var player1 = new Player(200, 375);
+var player2 = new Player(100, 345);
+player2.sprite = "images/char-cat-girl";
+var players = [player1, player2];
 
 /*******************************************************************************/
 var PlayerLife = function(x, y) {
@@ -281,12 +284,12 @@ var playerLives = [playerLife1, playerLife2, playerLife3];
 var renderHeart = function() {
     "use strict";
     if (playerLivesCounter === 3) {
-        playerLives = [playerLife1, playerLife2,playerLife3];
+        playerLives = [playerLife1, playerLife2, playerLife3];
     } else if (playerLivesCounter === 2) {
         playerLives = [playerLife1, playerLife2];
     } else if (playerLivesCounter === 1) {
         playerLives = [playerLife1];
-    }else if (playerLivesCounter === 0) {
+    } else if (playerLivesCounter === 0) {
         playerLives = [];
     }
 };
@@ -304,5 +307,5 @@ document.addEventListener('keyup', function(e) {
         40: 'down'
     };
 
-    player.handleInput(allowedKeys[e.keyCode]);
+    player1.handleInput(allowedKeys[e.keyCode]);
 });

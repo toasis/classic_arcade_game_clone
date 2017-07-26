@@ -95,7 +95,10 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
-        player.update();
+        // player.update();
+        players.forEach(function(player) {
+            player.update();
+        });
     }
 
     function updateExtras(dt) {
@@ -119,8 +122,8 @@ var Engine = (function(global) {
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
-         ctx.fillStyle = "#FFFF00"; // Yellow
-         ctx.fillRect(0,0, ctx.canvas.width, ctx.canvas.height);
+        ctx.fillStyle = "#FFFF00"; // Yellow
+        ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         var rowImages = [
                 'images/water-block.png', // Top row is water
                 'images/stone-block.png', // Row 1 of 3 of stone
@@ -166,7 +169,9 @@ var Engine = (function(global) {
             enemy.render();
         });
 
-        player.render();
+        players.forEach(function(player) {
+            player.render();
+        });
         // allGems.forEach(function(gem) {
         //     gem.render();
         // });
@@ -203,7 +208,8 @@ var Engine = (function(global) {
         'images/GameWon.png',
         'images/GameOutBorder.png',
         'images/Heart.png',
-        'images/hitbug.png'
+        'images/hitbug.png',
+        'images/char-cat-girl.png'
     ]);
     Resources.onReady(init);
 
