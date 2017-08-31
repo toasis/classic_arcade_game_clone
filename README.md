@@ -1,4 +1,6 @@
 # Frogger Game
+## How to run this game
+Click on index.html file to open it in your browser or visit my [Github](https://github.com/toasis/classic_arcade_game_clone) page to run. Enjoy this game!
 
 ## Goal
 
